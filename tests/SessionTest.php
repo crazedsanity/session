@@ -20,7 +20,7 @@ class TestOfSession extends PHPUnit_Framework_TestCase {
 	function test_instantiation() {
 		$x = new crazedsanity\session\Session();
 		
-		$this->assertTrue(strlen($x->sid) > 0);
+		$this->assertTrue(strlen($x->sid) > 0, "invalid length of SID: ". $x->sid);
 		$this->assertEquals($x->uid, 0);
 		$this->assertEquals($x->sid_check, 1);
 		$this->assertEquals($x->is_authenticated(), 0);
